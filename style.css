@@ -21,7 +21,8 @@ body {
     padding: 20px;
 }
 
-.main-menu {
+.main-menu,
+.game-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,9 +41,14 @@ body {
     text-align: center;
 }
 
-.main-menu-button {
+.main-menu-button,
+.game-button {
     width: 100%;
     max-width: 400px;
     height: 40px;
     margin-bottom: 20px;
+}
+
+.game-menu {
+    display: none;
 }

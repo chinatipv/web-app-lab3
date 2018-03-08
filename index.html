@@ -13,12 +13,21 @@
     <div class="container">
         <div class="inner-container">
             <div class="game-container">
-                <div class "main-menu">
+                <div id="main-menu" class="main-menu">
                     <div class="button-wrapper">
                         <h1>Welcome to game</h1>
                         <div class="main-menu-button button" onclick=start(5)>5</div>
                         <div class="main-menu-button button" onclick=start(10)>10</div>
                         <div class="main-menu-button button" onclick=start(15)>15</div>
+                    </div>
+                </div>
+                <div id="game-menu" class="game-menu">
+                    <div class="button-wrapper">
+                        <h3 id="question-number"></h3>
+                        <div class="game-button button" id="question-choice-0" onclick=select(0)>1)</div>
+                        <div class="game-button button" id="question-choice-1" onclick=select(1)>2)</div>
+                        <div class="game-button button" id="question-choice-2" onclick=select(2)>3)</div>
+                        <div class="game-button button" id="question-choice-3" onclick=select(3)>4)</div>
                     </div>
                 </div>
             </div>
