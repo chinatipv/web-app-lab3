@@ -15,7 +15,8 @@
             <div class="game-container">
                 <div id="main-menu" class="main-menu">
                     <div class="button-wrapper">
-                        <h1>Welcome to game</h1>
+                        <h1>Welcome to Millionaire game</h1>
+                        <h3>Select number of question you want to play</h3>
                         <div class="main-menu-button button" onclick=start(5)>5</div>
                         <div class="main-menu-button button" onclick=start(10)>10</div>
                         <div class="main-menu-button button" onclick=start(15)>15</div>
@@ -23,6 +24,7 @@
                 </div>
                 <div id="game-menu" class="game-menu">
                     <div class="button-wrapper">
+                        <div id="blocker" class="blocker"></div>
                         <h3 id="question-number"></h3>
                         <h3 id="timer"></h3>
                         <div class="game-button button" id="question-choice-0" onclick=select(0)>1)</div>
@@ -31,13 +33,24 @@
                         <div class="game-button button" id="question-choice-3" onclick=select(3)>4)</div>
                     </div>
                 </div>
-                <div id="end-menu" class="game-menu">
+                <div id="end-menu" class="end-menu">
                     <h1>End game</h1>
-                    <p id="score"></p>
-                    <p id="score-correct"></p>
-                    <p id="score-incorrect"></p>
-                    <p id="total-time"></p>
-                    <p id="average-time"></p>
+                    <div class="score-wrapper">
+                        <div class="score-label">
+                            <p>Score</p>
+                            <p class="score-child">Correct</p>
+                            <p class="score-child">Incorrect</p>
+                            <p>Total Time</p>
+                            <p>Average Time</p>
+                        </div>
+                        <div class="score-value">
+                            <p id="score"></p>
+                            <p id="score-correct"></p>
+                            <p id="score-incorrect"></p>
+                            <p id="total-time"></p>
+                            <p id="average-time"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
