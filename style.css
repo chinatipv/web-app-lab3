@@ -46,10 +46,12 @@ body {
 }
 
 .button {
-    background: grey;
+    background: #2da3ef;
     border-radius: 4px;
     text-align: center;
     cursor: pointer;
+    font-weight: bold;
+    color: white;
 }
 
 .main-menu-button,
@@ -85,12 +87,27 @@ body {
 .score-label {
     text-align: left;
     width: 200px;
+    font-weight: bold;
 }
 
 .score-value {
     width: 50px;
+    font-weight: bold;
 }
 
 .score-child {
+    font-weight: 400;
     padding-left: 30px;
+}
+
+.img-wrapper {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }

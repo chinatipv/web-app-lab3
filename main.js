@@ -14,9 +14,25 @@ function loadJSON(callback) {
 
 }
 
+function shuffle(array) {
+    var currentIndex = array.length,
+        temporaryValue, randomIndex;
+
+    while (0 !== currentIndex) {
+
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
+
 loadJSON(function(response) {
     questions = JSON.parse(response).questions;
-    console.log("questions", questions)
 });
 
 const timePerQuestion = 10;
@@ -30,6 +46,7 @@ var totalUsedTime = 0;
 var timer;
 
 function start(n) {
+    questions = shuffle(questions);
     numberQuestion = n;
     totalTime = timePerQuestion * numberQuestion;
     numCurrent = 0;
@@ -41,6 +58,14 @@ function start(n) {
 
 function getQuestion() {
     let question = questions[numCurrent];
+    console.log(question.image, !!question.image)
+    if (!!question.image) {
+        document.getElementById("question-img").style.display = "block";
+        $("#question-img").attr('src', question.image);
+    } else {
+        document.getElementById("question-img").style.display = "none";
+    }
+
     document.getElementById("question-number").innerHTML = question.question;
     for (var i = 0; i < 4; i++) {
         document.getElementById(`question-choice-${i}`).innerHTML = `${i+1}) ${question[i]}`;
