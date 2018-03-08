@@ -52,7 +52,7 @@ function start(n) {
     numCurrent = 0;
 
     document.getElementById("main-menu").style.display = "none";
-    document.getElementById("game-menu").style.display = "block";
+    document.getElementById("game-menu").style.display = "flex";
     getQuestion();
 }
 
@@ -104,7 +104,7 @@ function hideMainMenu() {
 function next() {
     if (numCurrent < numberQuestion - 1) {
         clearInterval(timer);
-        document.getElementById("blocker").style.display = "block";
+        document.getElementById("blocker").style.display = "flex";
         setTimeout(function() {
             const usedTime = timePerQuestion - currentQuestionTime;
             totalUsedTime += usedTime;
@@ -114,7 +114,7 @@ function next() {
         }, 300);
     } else {
         document.getElementById("game-menu").style.display = "none";
-        document.getElementById("end-menu").style.display = "block";
+        document.getElementById("end-menu").style.display = "flex";
         document.getElementById("score").innerHTML = score;
         document.getElementById("score-correct").innerHTML = score;
         document.getElementById("score-incorrect").innerHTML = numberQuestion - score;
@@ -131,6 +131,6 @@ function reset() {
     usedTime = 0;
     totalUsedTime = 0;
     clearInterval(timer);
-    document.getElementById("main-menu").style.display = "block";
+    document.getElementById("main-menu").style.display = "flex";
     document.getElementById("end-menu").style.display = "none";
 }
