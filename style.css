@@ -111,3 +111,11 @@ img {
     width: 100%;
     height: auto;
 }
+
+.reset-button {
+    margin: auto;
+    margin-top: 40px;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+}
