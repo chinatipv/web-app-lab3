@@ -130,6 +130,7 @@ function reset() {
     score = 0;
     usedTime = 0;
     totalUsedTime = 0;
+    clearInterval(timer);
     document.getElementById("main-menu").style.display = "block";
     document.getElementById("end-menu").style.display = "none";
 }
